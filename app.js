@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 const port = 3000;
+const hosting = "0.0.0.0";
 
 // Middleware
 app.use(bodyParser.json());
@@ -24,6 +25,6 @@ app.use("/contact", contactRouter);
 
 // SERVER
 const server = http.createServer(app);
-server.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}/`);
+server.listen(port, hosting, () => {
+    console.log(`Server running at http://${hosting}:${port}/`);
 });
