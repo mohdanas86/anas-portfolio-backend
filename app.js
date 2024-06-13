@@ -12,7 +12,7 @@ const hosting = "0.0.0.0";
 app.use(bodyParser.json());
 
 const corsOptions = {
-    origin: "http://localhost:5173"
+    origin: "https://anas-portfolio-42hj.onrender.com"
 };
 app.use(cors(corsOptions));
 
